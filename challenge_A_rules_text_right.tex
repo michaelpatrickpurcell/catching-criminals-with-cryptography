@@ -1,0 +1,39 @@
+\begin{minipage}{6cm}\raggedright
+\textsf{\LARGE Example}\\[1.0ex]
+Use the keyword \texttt{GOBLIN} to encrypt the message:\\[1.25ex]
+\texttt{HOW QUICKLY DAFT JUMPING ZEBRAS VEX}\\[1.25ex]
+
+\begin{enumerate}[leftmargin=*]
+\item Write the message in a grid with $n=6$ columns.
+
+\ttfamily
+\begin{center}
+%\raggedright
+\begin{tabular}{*{6}{|c}|}\hline
+H & O & W & Q & U & I \\\hline
+C & K & L & Y & D & A \\\hline
+F & T & J & U & M & P \\\hline
+I & N & G & Z & E & B \\\hline
+R & A & S & V & E & X \\\hline
+\end{tabular}
+\end{center}
+\rmfamily
+
+\item Number the columns of the resulting grid according to the alphabetical ordering of the letters of the keyword.
+\ttfamily
+\begin{center}
+%\raggedright
+\begin{tabular}{*{6}{|c}|}\hline
+2 & 6 & 1 & 4 & 4 & 5 \\\hline
+G & O & B & L & I & N \\\hline
+\end{tabular}
+\end{center}
+\rmfamily
+
+\item Read down the columns in increasing order of the numbers assigned in the previous step.\\[1.25ex]
+\end{enumerate}
+
+This yields the ciphertext:\\[1.25ex]
+
+\texttt{WLJGS HCFIR UDMEE QYUZV IAPBX OKTNA}
+\end{minipage}

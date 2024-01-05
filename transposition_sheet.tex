@@ -1,0 +1,29 @@
+\documentclass[11pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{enumitem}
+%\usepackage{unicode-math}
+%\setmathfont{Tex Gyre Schola Math}
+\usepackage{arev}
+\usepackage{fontspec}
+\setmainfont{Roboto}
+\setmonofont{Roboto Mono}
+\setsansfont{Orbitron-Bold}
+\usepackage{nysf2024}
+\usepackage[type={CC}, version={4.0}, modifier={by-sa}]{doclicense} % Add text and icons for creative commons license
+
+\begin{document}
+\begin{tikzpicture}
+\node[draw,line width=0.72mm,minimum width=5.7312in,minimum height=6.5in, anchor=north, rounded corners=3mm] at (0in,2.8in) {};
+
+\node[anchor=north west] at (-2.5in, 2.65in) {\input{convo_A2b.tex}};
+
+%\node[draw] at (0,3.45in) {\setmainfont[Scale=2.5]{Tex Gyre Heros-Bold} \Huge Columnar Transposition};
+\node[anchor=north] at (0,3.925in) {\setmainfont[Scale=2.5]{Orbitron-Bold} \Huge Transposition Cipher};
+
+\node[anchor=north] at (-4.25in, 2.85in) {\input{challenge_A2_rules_text_left.tex}};
+\node[anchor=north] at (4.25in, 2.85in) {\input{challenge_A_rules_text_right.tex}};
+
+\path (-148.5mm, -105mm) -- (148.5mm, 105mm);
+\end{tikzpicture}
+\end{document}

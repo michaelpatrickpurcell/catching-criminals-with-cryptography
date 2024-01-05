@@ -1,0 +1,38 @@
+\begin{minipage}{6cm}\raggedright
+\textsf{\LARGE Overview}\\[1.0ex]
+
+The Playfair cipher is a \underline{\textbf{c}}ipher in w\underline{\textbf{h}}ich each pair of consecutive characters is replaced by another.\\[1.25ex]
+
+How this is done \underline{\textbf{i}}s determined by a secret keyword that is agreed upon ahead of ti\underline{\textbf{m}}e by the message's sender and rec\underline{\textbf{e}}iver.\\[3ex] 
+
+\textsf{\LARGE Encryption}\\[1.0ex]
+
+To encrypt a message with a keyword of length $n$:
+\begin{enumerate}[leftmargin=*]
+	\item Write out the keyword as the first $n$ entries in a $5\times 5$ table. Fill the rest of the table with the remaining letters (omit \texttt{Q}).\\[1.25ex]
+	\item Insert an \texttt{X} between any repeated letters. Break the message into digraphs.  %Replace repeated or missing letters with \texttt{X}s.
+	\item Replace each digraph via:
+	
+	If both letters appear in the same row, replace each one with the letter to its right.
+	
+	If both letters appear in the same column, replace each one with the letter below it.
+	
+	%Otherwise, replace it with the letters at the opposite corners of the rectangle that it defines.
+	
+	Otherwise, replace each letter with the one on the same row as it and the same column as the other letter in the digraph.
+\end{enumerate}
+%\textsf{\Large Example}\\[1.0ex]
+%
+%Suppose you wanted to use the keyword \texttt{GOBLIN} to encrypt the following message:\\[1.25ex]
+%
+%\texttt{PACK MY RED BOX WITH FIVE DOZEN QUALITY JUGS}.\\[1.25ex]
+%
+%Test.\\[1.25ex]
+%
+%Test.\\[1.25ex]
+%
+%\textbf{Game Design:} Michael Purcell
+%
+%\textbf{Contact:} ttkttkt@gmail.com
+%%\textbf{License:} \doclicenseText
+\end{minipage}

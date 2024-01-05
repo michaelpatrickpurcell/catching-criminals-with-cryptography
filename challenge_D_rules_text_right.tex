@@ -1,0 +1,50 @@
+\begin{minipage}{6cm}\raggedright
+\textsf{\LARGE Example}\\[1.0ex]
+Use the keywords $k_1=\texttt{DRAGONS}$ and $k_2=\texttt{HOARD}$ to encrypt:
+\begin{center}
+\texttt{TREASURE}\\[1.25ex]
+\end{center}
+
+\begin{enumerate}[leftmargin=*]
+\item Use $k_1$ to construct the bottom-left table.
+
+\ttfamily
+\begin{center}
+%\raggedright
+\begin{tabular}{*{5}{|c}|}\hline
+D & R & A & G & O \\\hline
+N & S & B & C & E \\\hline
+F & H & I & J & K \\\hline
+L & M & P & T & U \\\hline
+V & W & X & Y & Z \\\hline
+\end{tabular}
+\end{center}
+\rmfamily
+
+\item Use $k_2$ to construct the\\top-right table.
+
+\ttfamily
+\begin{center}
+%\raggedright
+\begin{tabular}{*{5}{|c}|}\hline
+H & O & A & R & D \\\hline
+B & C & E & F & G \\\hline
+I & J & K & L & M \\\hline
+N & P & S & T & U \\\hline
+V & W & X & Y & Z \\\hline
+\end{tabular}
+\end{center}
+\rmfamily
+
+\item Use all four tables to replace each digraph with another.
+\begin{center}
+\texttt{TR} $\rightarrow$ \texttt{PT} \qquad \texttt{EA} $\rightarrow$ \texttt{HO}\\
+\texttt{SU} $\rightarrow$ \texttt{UP} \qquad \texttt{RE} $\rightarrow$ \texttt{UR}
+\end{center}
+\end{enumerate}
+
+This yields the ciphertext:
+\begin{center}
+\texttt{PTHOUPUR}
+\end{center}
+\end{minipage}

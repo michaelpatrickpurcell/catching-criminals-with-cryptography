@@ -1,0 +1,46 @@
+\begin{minipage}{6cm}\raggedright
+\textsf{\LARGE Example}\\[1.0ex]
+Use the keyword \texttt{GOBLIN} to encrypt the message:
+\begin{center}
+\texttt{PASSIONATE}\\[1.25ex]
+\end{center}
+
+\begin{enumerate}[leftmargin=*]
+\item Use the keyword to construct the $5x5$ substitution table.
+
+\ttfamily
+\begin{center}
+%\raggedright
+\begin{tabular}{*{5}{|c}|}\hline
+G & O & B & L & I \\\hline
+N & A & C & D & E \\\hline
+F & H & J & K & M \\\hline
+P & R & S & T & U \\\hline
+V & W & X & Y & Z \\\hline
+\end{tabular}
+\end{center}
+\rmfamily
+
+\item Insert an \texttt{X} between any repeated letters. Break the message into digraphs.
+\ttfamily
+\begin{center}
+PA SX SI ON AT EX
+\end{center}
+\rmfamily
+
+\item Use the substitution table to replace each digraph.\\[1.25ex]
+
+\qquad \texttt{PA} $\rightarrow$ \texttt{RN} \quad (rectangle)\\
+\qquad \texttt{SX} $\rightarrow$ \texttt{XB} \quad (same column)\\
+\qquad \texttt{SI} $\rightarrow$ \texttt{UB} \quad (rectangle)\\
+\qquad \texttt{ON} $\rightarrow$ \texttt{GA} \quad (rectangle) \\
+\qquad \texttt{AT} $\rightarrow$ \texttt{DR} \quad (rectangle)\\
+\qquad \texttt{EX} $\rightarrow$ \texttt{CZ} \quad (rectangle)\\
+
+\end{enumerate}
+
+This yields the ciphertext:
+\begin{center}
+\texttt{RNXBUBGADRCZ}
+\end{center}
+\end{minipage}

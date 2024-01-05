@@ -1,0 +1,50 @@
+\begin{minipage}{6cm}\raggedright
+\textsf{\LARGE Example}\\[1.0ex]
+Use the keyword \texttt{DEADBEEF} to encrypt the message:
+\begin{center}
+\texttt{A LONG TIME AGO}
+\end{center}
+\begin{enumerate}[leftmargin=*]
+\item Write out the keyword, repeating as necessary to create a key of length $\ell = 12$.
+
+\ttfamily
+\begin{center}
+\raggedright
+\begin{tabular}{r r}
+\textrm{Message:} & ALONGTIMEAGO \\
+\textrm{Key:} & DEADBEEFDEAD
+\end{tabular}
+\end{center}
+\rmfamily
+
+\item For each character in the key, compute the distance between that character and the letter \texttt{A}.
+\ttfamily
+\begin{center}
+%G - A = 6, O - A = 14, B - A = 1, L - A = 11, I - A = 8, N - A = 13
+\begin{tabular}{*{8}{|c}|}\hline
+D & E & A & D & B & E & E & F \\\hline
+3 & 4 & 0 & 3 & 1 & 4 & 4 & 5\\\hline
+\end{tabular}
+\end{center}
+\rmfamily
+
+\item Shift each character in the message forward by the amount computed in the previous step.
+\ttfamily
+\begin{center}
+\raggedright
+\begin{tabular}{r r}
+\textrm{Message:} & ALONGTIMEAGO \\
+\textrm{Key:} & DEADBEEFDEAD \\
+\textrm{Shift:} & 340314453403 \\
+%\textrm{Cipher:} & DPOQHXMRHEGR \\
+\end{tabular}
+\end{center}
+\rmfamily
+\end{enumerate}
+
+After restoring the spacing from the original message, this yields the ciphertext:\\[1.25ex]
+\begin{center}
+\texttt{D POQH XMRH EGR} 
+\end{center}
+
+\end{minipage}

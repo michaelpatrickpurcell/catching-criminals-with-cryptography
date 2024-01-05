@@ -1,0 +1,33 @@
+\begin{minipage}{6cm}\raggedright
+\textsf{\LARGE Overview}\\[1.0ex]
+
+A transp\underline{\textbf{o}}sition cipher reorders the positions of the characters in a message but does not change the characters themse\underline{\textbf{l}}ves.\\[1.25ex]
+
+%You will need a copy of these rules and something to write with.\\[1.125ex]
+In a columnar transposition cipher, the message is written out \underline{\textbf{i}}n rows of fixed length, and then read out column-by-column.\\[1.25ex]
+
+Both the width of the rows and the ordering of the columns is determined by a secret keyword agreed upon ahead of time by the message's sender and recei\underline{\textbf{ve}}r.\\[3.0ex]
+
+\textsf{\LARGE Encryption}\\[1.0ex]
+
+To encrypt a message with a keyword of length $n$:
+\begin{enumerate}[leftmargin=*]
+	\item Write the message in a grid with $n$ columns.\\[1.25ex]
+	\item Number the columns of the resulting  grid according to the alphabetical ordering of the letters of the keyword.
+	\item Read down the columns of the grid in increasing order of the numbers assigned to the columns in step 2.
+\end{enumerate}
+%\textsf{\Large Example}\\[1.0ex]
+%
+%Suppose you wanted to use the keyword \texttt{GOBLIN} to encrypt the following message:\\[1.25ex]
+%
+%\texttt{PACK MY RED BOX WITH FIVE DOZEN QUALITY JUGS}.\\[1.25ex]
+%
+%Test.\\[1.25ex]
+%
+%Test.\\[1.25ex]
+%
+%\textbf{Game Design:} Michael Purcell
+%
+%\textbf{Contact:} ttkttkt@gmail.com
+%%\textbf{License:} \doclicenseText
+\end{minipage}

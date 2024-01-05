@@ -1,0 +1,32 @@
+\begin{minipage}{6cm}\raggedright
+\textsf{\LARGE Overview}\\[1.0ex]
+
+A substitution ciphe\underline{\textbf{r}} replaces the characters in a message but does not rearrange them.\\[1.25ex]
+
+A polyalphabetic s\underline{\textbf{u}}bstitution cipher is a cipher that use\underline{\textbf{s}} more than one substitution alphabet.\\[1.25ex]
+
+The Vigen\'ere cipher is a famous polyalphabetic substitution cipher. The substi\underline{\textbf{t}}ution alphabets are determined by a secret keyword agreed upon ahead of time b\underline{\textbf{y}} the message's sender and receiver.\\[3ex] 
+
+\textsf{\LARGE Encryption}\\[1.0ex]
+
+To encrypt a message of length $\ell$ with a keyword:
+\begin{enumerate}[leftmargin=*]
+	\item Write out the keyword, repeating as necessary to create a key of length $\ell$.\\[1.25ex]
+	\item For each character in the key, compute the distance in the alphabet between that character and the letter \texttt{A}.
+	\item Shift each character of the message forward by the distance computed for its position in step 2. 
+\end{enumerate}
+%\textsf{\Large Example}\\[1.0ex]
+%
+%Suppose you wanted to use the keyword \texttt{GOBLIN} to encrypt the following message:\\[1.25ex]
+%
+%\texttt{PACK MY RED BOX WITH FIVE DOZEN QUALITY JUGS}.\\[1.25ex]
+%
+%Test.\\[1.25ex]
+%
+%Test.\\[1.25ex]
+%
+%\textbf{Game Design:} Michael Purcell
+%
+%\textbf{Contact:} ttkttkt@gmail.com
+%%\textbf{License:} \doclicenseText
+\end{minipage}

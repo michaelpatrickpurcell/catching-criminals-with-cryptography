@@ -1,0 +1,38 @@
+\begin{minipage}{6cm}\raggedright
+\textsf{\LARGE Overview}\\[1.0ex]
+
+The Four-Square cipher is a cipher in which each pair of consecutive characters is replaced by another.\\[1.25ex]
+
+%A set of four tables are used to encode the substitution alphabet.\\[1.25ex]
+
+How this is done is determined by four tables which are derived from a pair of secret keywords agreed upon ahead of time by the message's sender and receiver.\\[3ex] 
+
+\textsf{\LARGE Encryption}\\[1.0ex]
+
+To encrypt a message with the keywords $k_1$ and $k_2$:
+\begin{enumerate}[leftmargin=*]
+	\item Write out $k_1$ as the first entries in the bottom-left  table. Fill the rest of the table with the remaining letters (omit \texttt{Q}).\\[1.25ex]
+	\item Write out $k_2$ as the first entries in the top-right table. Fill the rest of the table with the remaining letters (omit \texttt{Q}).\\[1.25ex]
+	\item Replace each digraph $x_1x_2$ via:
+	
+	Locate $x_1$ in the top-left table and $x_2$ in the bottom-right table.
+	
+	Locate the letters $y_1$ in the top-right table and $y_2$ in the bottom-left table that complete the rectangle defined by $x_1x_2$.
+	
+	Replace $x_1x_2$ with $y_1y_2$.
+\end{enumerate}
+%\textsf{\Large Example}\\[1.0ex]
+%
+%Suppose you wanted to use the keyword \texttt{GOBLIN} to encrypt the following message:\\[1.25ex]
+%
+%\texttt{PACK MY RED BOX WITH FIVE DOZEN QUALITY JUGS}.\\[1.25ex]
+%
+%Test.\\[1.25ex]
+%
+%Test.\\[1.25ex]
+%
+%\textbf{Game Design:} Michael Purcell
+%
+%\textbf{Contact:} ttkttkt@gmail.com
+%%\textbf{License:} \doclicenseText
+\end{minipage}

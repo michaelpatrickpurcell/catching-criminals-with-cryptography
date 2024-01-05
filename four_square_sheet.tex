@@ -1,0 +1,72 @@
+\documentclass[11pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{enumitem}
+%\usepackage{unicode-math}
+%\setmathfont{Tex Gyre Schola Math}
+\usepackage{arev}
+\usepackage{fontspec}
+\setmainfont{roboto}
+\setmonofont{Roboto Mono}
+\setsansfont{Orbitron-Bold}
+\usepackage{nysf2024}
+%\usepackage{microtype}
+\usepackage[type={CC}, version={4.0}, modifier={by-sa}]{doclicense} % Add text and icons for creative commons license
+
+\tikzset{blank_grid/.pic={
+\foreach \i in {-2.5,-1.25,0,1.25,2.5}
+	\foreach \j in {-2.5,-1.25,0,1.25,2.5}
+		\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (\i cm, -\j cm) {\Huge \texttt{\phantom{A}}};
+}}
+
+\tikzset{alpha_grid/.pic={
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (-2.5cm, 2.5cm) {\Huge \texttt{A}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (-1.25cm, 2.5cm) {\Huge \texttt{B}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (0, 2.5cm) {\Huge \texttt{C}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (1.25cm, 2.5cm) {\Huge \texttt{D}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (2.5cm, 2.5cm) {\Huge \texttt{E}};
+
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (-2.5cm, 1.25cm) {\Huge \texttt{F}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (-1.25cm, 1.25cm) {\Huge \texttt{G}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (0, 1.25cm) {\Huge \texttt{H}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (1.25cm, 1.25cm) {\Huge \texttt{I}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (2.5cm, 1.25cm) {\Huge \texttt{J}};
+
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (-2.5cm, 0) {\Huge \texttt{K}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (-1.25cm, 0) {\Huge \texttt{L}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (0, 0) {\Huge \texttt{M}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (1.25cm, 0) {\Huge \texttt{N}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (2.5cm, 0) {\Huge \texttt{O}};
+
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (-2.5cm, -1.25cm) {\Huge \texttt{P}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (-1.25cm, -1.25cm) {\Huge \texttt{R}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (0, -1.25cm) {\Huge \texttt{S}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (1.25cm, -1.25cm) {\Huge \texttt{T}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (2.5cm, -1.25cm) {\Huge \texttt{U}};
+
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (-2.5cm, -2.5cm) {\Huge \texttt{V}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (-1.25cm, -2.5cm) {\Huge \texttt{W}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (0, -2.5cm) {\Huge \texttt{X}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (1.25cm, -2.5cm) {\Huge \texttt{Y}};
+\node[draw, very thick, minimum width=1.25cm, minimum height=1.25cm] at (2.5cm, -2.5cm) {\Huge \texttt{Z}};
+}}
+
+\begin{document}
+\begin{tikzpicture}
+%\node[draw,line width=0.72mm,minimum width=5.7312in,minimum height=6.5in, anchor=north, rounded corners=3mm] at (0in,2.8in) {};
+
+\pic at (-1.5in,-2in) {blank_grid};
+\pic at (1.5in,-2in) {alpha_grid};
+\pic at (1.5in,1.0in) {blank_grid};
+\pic at (-1.5in,1.0in) {alpha_grid};
+
+%\node[anchor=north west] at (-2.5in, 2.65in) {\input{convo_B2b.tex}};
+
+\node[anchor=north] at (0,3.925in) {\setmainfont[Scale=2.5]{Orbitron-Bold} \Huge Four-Square Cipher};
+
+\node[anchor=north] at (-4.25in, 2.85in) {\input{challenge_D_rules_text_left.tex}};
+\node[anchor=north] at (4.25in, 2.85in) {\input{challenge_D_rules_text_right.tex}};
+
+\path (-148.5mm, -105mm) -- (148.5mm, 105mm);
+\end{tikzpicture}
+\end{document}
