@@ -1,0 +1,93 @@
+\documentclass{standalone}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+
+\definecolor{c1}{HTML}{ff0000}%{7e7049}%{090b80}
+\definecolor{c2}{HTML}{00ff00}%{8393c4}%{7f812a}
+
+%\colorlet{c1}{Cyan}
+%\colorlet{c2}{Magenta}
+
+
+
+\tikzset{every node/.style={minimum width=1cm, minimum height=1cm, inner sep=0pt, draw, ultra thick}}
+
+\tikzset{left_image/.pic={
+\node[fill=c1] at (-2cm,2cm) {A};
+\node[fill=c1] at (-1cm,2cm) {B};
+\node[fill=c1] at (0cm,2cm) {C};
+\node[fill=c2] at (1cm,2cm) {D};
+\node[fill=c2] at (2cm,2cm) {E};
+
+\node[fill=c1] at (-2cm,1cm) {F};
+\node[fill=c1] at (-1cm,1cm) {G};
+\node[fill=c2] at (0cm,1cm) {H};
+\node[fill=c2] at (1cm,1cm) {I};
+\node[fill=c1] at (2cm,1cm) {J};
+
+\node[fill=c2] at (-2cm,0cm) {K};
+\node[fill=c1] at (-1cm,0cm) {L};
+\node[fill=c2] at (0cm,0cm) {M};
+\node[fill=c2] at (1cm,0cm) {N};
+\node[fill=c1] at (2cm,0cm) {O};
+
+\node[fill=c2] at (-2cm,-1cm) {P};
+\node[fill=c2] at (-1cm,-1cm) {R};
+\node[fill=c1] at (0cm,-1cm) {S};
+\node[fill=c1] at (1cm,-1cm) {T};
+\node[fill=c2] at (2cm,-1cm) {U};
+
+\node[fill=c2] at (-2cm,-2cm) {V};
+\node[fill=c1] at (-1cm,-2cm) {W};
+\node[fill=c2] at (0cm,-2cm) {X};
+\node[fill=c2] at (1cm,-2cm) {Y};
+\node[fill=c1] at (2cm,-2cm) {Z};
+
+\node[minimum width=5cm, minimum height=5cm, draw, line width=2mm] at (0,0) {};
+%\node[fill=black, circle, minimum width=3mm, minimum height=3mm] at (0,0) {};
+}}
+
+\tikzset{right_image/.pic={
+\node[fill=c2] at (-2cm,2cm) {A};
+\node[fill=c2] at (-1cm,2cm) {B};
+\node[fill=c2] at (0cm,2cm) {C};
+\node[fill=c1] at (1cm,2cm) {D};
+\node[fill=c1] at (2cm,2cm) {E};
+
+\node[fill=c2] at (-2cm,1cm) {F};
+\node[fill=c1] at (-1cm,1cm) {G};
+\node[fill=c2] at (0cm,1cm) {H};
+\node[fill=c2] at (1cm,1cm) {I};
+\node[fill=c1] at (2cm,1cm) {J};
+
+\node[fill=c1] at (-2cm,0cm) {K};
+\node[fill=c2] at (-1cm,0cm) {L};
+\node[fill=c1] at (0cm,0cm) {M};
+\node[fill=c1] at (1cm,0cm) {N};
+\node[fill=c1] at (2cm,0cm) {O};
+
+\node[fill=c1] at (-2cm,-1cm) {P};
+\node[fill=c2] at (-1cm,-1cm) {R};
+\node[fill=c1] at (0cm,-1cm) {S};
+\node[fill=c1] at (1cm,-1cm) {T};
+\node[fill=c2] at (2cm,-1cm) {U};
+
+\node[fill=c1] at (-2cm,-2cm) {V};
+\node[fill=c2] at (-1cm,-2cm) {W};
+\node[fill=c1] at (0cm,-2cm) {X};
+\node[fill=c1] at (1cm,-2cm) {Y};
+\node[fill=c2] at (2cm,-2cm) {Z};
+
+\node[minimum width=5cm, minimum height=5cm, draw, line width=2mm] at (0,0) {};
+%\node[fill=black, circle, minimum width=3mm, minimum height=3mm] at (0,0) {};
+}}
+
+
+\begin{document}
+\begin{tikzpicture}
+\Large
+\pic at (0,0) {left_image};
+\pic at (6cm,0cm) {right_image};
+\end{tikzpicture}
+\end{document}

@@ -41,6 +41,14 @@ glyphs = (
     ]),
 )
 
+glyph_e = np.array([
+        [1,1,1,1,1],
+        [1,0,0,0,0],
+        [1,1,1,1,0],
+        [1,0,0,0,0],
+        [1,1,1,1,1],
+    ])#E
+
 letters='ABCDEFGHIJ'
 
 def generate_pixel_grid(pixel_values, n_rows, n_cols):
@@ -159,7 +167,8 @@ if __name__ == '__main__':
     np.random.seed(seed)
 
     # TODO: Get a random glyph from a list of candidates
-    glyph = np.load('Images/ringleader_mugshot.npy')
+    glyph = glyph_e#np.load('Images/ringleader_mugshot.npy')
+    print(glyph.shape)
 
     exp_factor = 3
     n_rows=len(glyph)*exp_factor
@@ -179,7 +188,7 @@ if __name__ == '__main__':
     n_rows=len(expanded_image)*2
     n_cols=len(expanded_image[0])*2
 
-    initial_tetra_pixel_indices = np.random.randint(0,6,n_rows//2 * n_cols//2)
+    # initial_tetra_pixel_indices = np.random.randint(0,6,n_rows//2 * n_cols//2)
 
     tetra_pixel_indices = np.arange(6)
     pixel_values_list = [np.zeros((n_rows,n_cols), dtype=int) - 1 for i in range(6)]
@@ -195,5 +204,5 @@ if __name__ == '__main__':
 
     for i, pixel_values in enumerate(pixel_values_list[:6]):
         print(type(pixel_values))
-        save_tikzpicture(bit_array=pixel_values, filename='Images/secret_share_%i.png' %i)
+        save_tikzpicture(bit_array=pixel_values, filename='Images/glyph_secret_share_%i.png' %i)
 
